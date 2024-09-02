@@ -16,3 +16,30 @@ There will also be a response from the bot informing about whether or not it's c
 ### !poenews stop
 The bot will stop posting updates regarding the path of exile news feed in the current channel.  
 There will also be a response from the bot informing about whether or not it's currently listening for news.
+
+## Getting Started
+### Prerequisites
+- Cargo version 1.76.0 or newer
+	- Cargo is Rust's build system and package manager, so we need it for building and running our application
+
+- A Discord bot application with all gateway intents
+	- A discord bot application is needed to acces the Discord API, so we need a corresponding discord token for the application to work
+	- These can be set up easily at https://discord.com/developers/applications
+
+### Installation
+
+**Step 1: Clone the project**  
+```git clone git@github.com:EllingV/poenews-discordbot.git```
+
+**Step 2: Set up a DISCORD_TOKEN environment variable**  
+Make sure the value of the variable is set to the token of your discord bot application.  
+In Windows PowerShell:  
+```$env:DISCORD_TOKEN="myToken"```  
+
+**Step 3: Build the application**  
+```cargo build --release```  
+Note: The __--release__ flag is optional, and omitting it will result in building the debug version [unoptimized + debuginfo] as opposed to the release version [optimized].
+
+**Step 4: Run the application**
+```cargo run --release```  
+You should see the line: "rustbot is connected!" quite fast after running the application
