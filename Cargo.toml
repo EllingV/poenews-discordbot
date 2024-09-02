@@ -1,0 +1,15 @@
+[package]
+name = "discord-bot-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.38"
+lazy_static = "1.4.0"
+regex = "1.10.4"
+reqwest = "0.11.24"
+rss = "2.0.7"
+serenity = { default-features = false, features = ["client", "gateway", "model", "rustls_backend"], version = "0.12.0" }
+tokio = { version = "1.21.2", features = ["full"] }
