@@ -9,7 +9,7 @@ The discord bot comes with a few commands:
 The bot will respond by listing the available commands with a short description.  
 Can be usefull for when you forget the available commands.
 #### !poenews
-The bot will respond with more information about ```!poenews start``` and ```!poenews stop```.  
+The bot will respond with more information about **!poenews start** and **!poenews stop**.  
 #### !poenews start
 The bot will start to post updates regarding the path of exile news feed in the current channel.  
 There will also be a response from the bot informing about whether or not it's currently listening for news.
@@ -28,18 +28,22 @@ There will also be a response from the bot informing about whether or not it's c
 
 ### Installation
 
-**Step 1: Clone the project**  
-```git clone git@github.com:EllingV/poenews-discordbot.git```
+#### Step 1: Clone the project  
+Example using SSH:  
+```git clone git@github.com:EllingV/poenews-discordbot.git```  
 
-**Step 2: Set up a DISCORD_TOKEN environment variable**  
-Make sure the value of the variable is set to the token of your discord bot application.  
-In Windows PowerShell:  
+#### Step 2: Set up the DISCORD_TOKEN environment variable
+Make sure the value of this variable is set to the token of your discord bot application.  
+Example of setting the env in Windows PowerShell:  
 ```$env:DISCORD_TOKEN="myToken"```  
 
-**Step 3: Build the application**  
+#### Step 3: Build the application
+To build our Rust application we use Cargo:  
 ```cargo build --release```  
 Note: The __--release__ flag is optional, and omitting it will result in building the debug version [unoptimized + debuginfo] as opposed to the release version [optimized].
 
-**Step 4: Run the application**
-```cargo run --release```  
-You should see the line: "rustbot is connected!" quite fast after running the application
+#### Step 4: Run the application
+And to run our application, we also use Cargo::  
+```cargo run --release```
+
+You should see the line: __rustbot is connected!__ once the application is up and running
