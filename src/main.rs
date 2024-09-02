@@ -16,7 +16,7 @@ mod cms;
 // Module containing functions and structs relating to the path of exile news rss-feed
 mod poenews;
 // Module containing saved rss feed data used in testing
-mod rsstestdata;
+// mod rsstestdata;
 
 lazy_static! {
     /// This list contains copies of messages initializing news with the `cms::POE_NEWS_START` command,

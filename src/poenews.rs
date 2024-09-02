@@ -1,7 +1,7 @@
 
 use lazy_static::lazy_static;
 
-use crate::rsstestdata; // 1.4.0
+//use crate::rsstestdata; // 1.4.0
 
 /// A struct for `news posts` found in the `path of exile` rss feed
 /// - `title` is used as, well, the title of the news post
@@ -72,55 +72,55 @@ pub async fn load_feed() -> Vec<Post> {
 }
 
 
-/// A function that effectively loads "rss feed" from saved 'const &str' variables in rsstestdata.rs
-/// We have two of these so we can test content updates with static data
-pub async fn _load_feed_testdata() -> Vec<Post> {
-    // We will "save" the newest 30 posts in the rss feed here
-    let mut posts: Vec<Post> = Vec::new();
+// A function that effectively loads "rss feed" from saved 'const &str' variables in rsstestdata.rs
+// We have two of these so we can test content updates with static data
+// pub async fn load_feed_testdata() -> Vec<Post> {
+//     // We will "save" the newest 30 posts in the rss feed here
+//     let mut posts: Vec<Post> = Vec::new();
 
-    let content = rsstestdata::RSS_FEED_DATA_1.as_bytes();
+//     let content = rsstestdata::RSS_FEED_DATA_1.as_bytes();
 
-    // Parse data from rss feed
-    let channel = rss::Channel::read_from(content)
-        .expect("Err parsing contents from rss feed channel");
+//     // Parse data from rss feed
+//     let channel = rss::Channel::read_from(content)
+//         .expect("Err parsing contents from rss feed channel");
 
-    // Loop over items parsed from feed, adding them to our posts
-    for item in channel.items {
-        let p = Post {
-            title: item.title.unwrap(),
-            description: item.description.unwrap(),
-            pub_date: item.pub_date.unwrap(),
-        };
+//     // Loop over items parsed from feed, adding them to our posts
+//     for item in channel.items {
+//         let p = Post {
+//             title: item.title.unwrap(),
+//             description: item.description.unwrap(),
+//             pub_date: item.pub_date.unwrap(),
+//         };
         
-        posts.push(p);
-    }
+//         posts.push(p);
+//     }
 
-    // Return statement
-    posts
-}
+//     // Return statement
+//     posts
+// }
 
-/// Identical to `load_feed_testdata()`, except for the `content` referring to another piece of testdata
-pub async fn _load_feed_testdata2() -> Vec<Post> {
-    // We will "save" the newest 30 posts in the rss feed here
-    let mut posts: Vec<Post> = Vec::new();
+// Identical to `load_feed_testdata()`, except for the `content` referring to another piece of testdata
+// pub async fn load_feed_testdata2() -> Vec<Post> {
+//     // We will "save" the newest 30 posts in the rss feed here
+//     let mut posts: Vec<Post> = Vec::new();
 
-    let content = rsstestdata::RSS_FEED_DATA_2.as_bytes();
+//     let content = rsstestdata::RSS_FEED_DATA_2.as_bytes();
 
-    // Parse data from rss feed
-    let channel = rss::Channel::read_from(content)
-        .expect("Err parsing contents from rss feed channel");
+//     // Parse data from rss feed
+//     let channel = rss::Channel::read_from(content)
+//         .expect("Err parsing contents from rss feed channel");
 
-    // Loop over items parsed from feed, adding them to our posts
-    for item in channel.items {
-        let p = Post {
-            title: item.title.unwrap(),
-            description: item.description.unwrap(),
-            pub_date: item.pub_date.unwrap(),
-        };
+//     // Loop over items parsed from feed, adding them to our posts
+//     for item in channel.items {
+//         let p = Post {
+//             title: item.title.unwrap(),
+//             description: item.description.unwrap(),
+//             pub_date: item.pub_date.unwrap(),
+//         };
         
-        posts.push(p);
-    }
+//         posts.push(p);
+//     }
 
-    // Return statement
-    posts
-}
+//     // Return statement
+//     posts
+// }
