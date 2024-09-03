@@ -3,11 +3,15 @@ This is a simple bot written in rust that periodically fetches news from the [Pa
 
 It's intended to make it easier keeping up to date with news related to the game Path of Exile.
 
+================================
 - [Features](#features)
 - [Getting Started](#getting-started)
 	- [Prerequisites](#prerequisites)
 	- [Installation](#intallation)
 - [Usage](#usage)
+- [File Structure](#file-structure)
+- [External Crates](#external-crates)
+================================
 
 ## Features
 The discord bot comes with a few commands:  
@@ -65,3 +69,25 @@ And that's really it!
 The bot is now going to send a message in the text channel(s) where ```!poenews start``` has been written, whenever a new news post is detected in the [Path of Exile rss-feed](https://www.pathofexile.com/news/rss).  
 Here's an example of what that looks like:  
 ![news update example](https://cdn.discordapp.com/attachments/1212370898062016543/1280517600203505736/image.png?ex=66d85e72&is=66d70cf2&hm=cd1339bbc224990a88abac2179cd418b752dd7daa159fc383d3af18df68e8a24&)   
+
+## File structure
+``` bash
+poenews-discordbot/
+├── src/
+│   ├── cms.rs			# This is where commands and messages are stored
+│   ├── main.rs			# Entry point and Event Handler for our application
+│   ├── poenews.rs		# Commands and structs related to the path of exile rss feed
+│   └── rsstestdata.rs	# (unused) dummy data used in testing
+├── .gitignore
+├── Cargo.toml	# The project manifest, containing data needed for compilation
+└── Readme.md	# Information about the project
+```
+
+## External crates
+- **[Serenity](https://crates.io/crates/serenity)** is a library we use for interacting with the Discord API.  
+- **[Tokio](https://crates.io/crates/tokio)** is a library serving as a platform for writing asynchronous applications, and it's a required dependency for using [Serenity](https://crates.io/crates/serenity).
+- **[Rss](https://crates.io/crates/rss)** is a library we use for parsing the Path of Exile rss feed
+- **[Reqwest](https://crates.io/crates/reqwest)** is an HTTP client library, and we use it for sending get requests to the Path of Exile rss feed
+- **[Regex](https://crates.io/crates/regex)** is an implementation of regular expression, and we use it for formatting the update messages sent by the discord bot
+- **[Lazy_static](https://crates.io/crates/lazy_static)** is a macro for declaring lazily evaluated statics, and we use it for global variables used by asynchronous functions
+- **[Chrono](https://crates.io/crates/chrono)** is a date and time library, and we use it for formatting the local server time
