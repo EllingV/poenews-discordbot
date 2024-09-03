@@ -1,9 +1,13 @@
-[toc]
-
 # Poenews-Discordbot
 This is a simple bot written in rust that periodically fetches news from the [Path of Exile rss-feed](https://www.pathofexile.com/news/rss), and post updates in relevant discord channels.  
 
 It's intended to make it easier keeping up to date with news related to the game Path of Exile.
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+	- [Prerequisites](#prerequisites)
+	- [Installation](#intallation)
+- [Usage](#usage)
 
 ## Features
 The discord bot comes with a few commands:  
@@ -20,7 +24,7 @@ The bot will stop posting updates regarding the path of exile news feed in the c
 There will also be a response from the bot informing about whether or not it's currently listening for news.
 
 ## Getting Started
-### Prerequisites
+### Prerequisites  
 - Cargo version 1.76.0 or newer
 	- Cargo is Rust's build system and package manager, so we need it for building and running our application
 
@@ -50,7 +54,7 @@ And to run our application, we also use Cargo::
 
 You should see the line: *rustbot is connected!* once the application is up and running
 
-### Usage
+## Usage
 To use the bot once it's up and running, any user can write any of the commands listed under [Features](#Features) in a discord server with the discord bot application.  
 Keep in mind that the discord bot application needs permission to use the text channel commands are posted in.
 
