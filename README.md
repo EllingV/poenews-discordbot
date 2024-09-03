@@ -74,9 +74,9 @@ Here's an example of what that looks like:
 ``` bash
 poenews-discordbot/
 ├── src/
-│   ├── cms.rs			# This is where commands and messages are stored
-│   ├── main.rs			# Entry point and Event Handler for our application
-│   ├── poenews.rs		# Commands and structs related to the path of exile rss feed
+│   ├── cms.rs		# This is where commands and messages are stored
+│   ├── main.rs		# Entry point and Event Handler for our application
+│   ├── poenews.rs	# Commands and structs related to the path of exile rss feed
 │   └── rsstestdata.rs	# (unused) dummy data used in testing
 ├── .gitignore
 ├── Cargo.toml	# The project manifest, containing data needed for compilation
