@@ -49,7 +49,7 @@ And to run our application, we also use Cargo::
 You should see the line: *rustbot is connected!* once the application is up and running
 
 ### Usage
-To use the bot once it's up and running, any user can write any of the commands listed under [Features](## Features) in a discord server with the discord bot application.  
+To use the bot once it's up and running, any user can write any of the commands listed under [Features](##Features) in a discord server with the discord bot application.  
 Keep in mind that the discord bot application needs permission to use the text channel commands are posted in.
 
 When writing a command in discord, it should look something like this:  
@@ -60,3 +60,15 @@ The bot is now going to send a message in the text channel(s) where ```!poenews 
 Here's an example of what that looks like:  
 ![news update example](https://cdn.discordapp.com/attachments/1212370898062016543/1280517600203505736/image.png?ex=66d85e72&is=66d70cf2&hm=cd1339bbc224990a88abac2179cd418b752dd7daa159fc383d3af18df68e8a24&)  
 
+## Project Structure
+``` bash
+poenews-discordbot/
+├── src/
+│   ├── cms.rs			# This is where commands and messages are stored
+│   ├── main.rs			# Entry point and Event Handler for our application
+│   ├── poenews.rs		# Commands and structs related to the path of exile rss feed
+│   └── rsstestdata.rs	# (unused) dummy data used in testing
+├── .gitignore
+├── Cargo.toml	# The project manifest, containing data needed for compilation
+└── Readme.md	# Information about the project
+```
