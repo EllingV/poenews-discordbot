@@ -3,15 +3,15 @@ This is a simple bot written in rust that periodically fetches news from the [Pa
 
 It's intended to make it easier keeping up to date with news related to the game Path of Exile.
 
-================================
+------------------------
 - [Features](#features)
 - [Getting Started](#getting-started)
 	- [Prerequisites](#prerequisites)
-	- [Installation](#intallation)
+	- [Installation](#installation)
 - [Usage](#usage)
 - [File Structure](#file-structure)
 - [External Crates](#external-crates)
-================================
+------------------------
 
 ## Features
 The discord bot comes with a few commands:  
