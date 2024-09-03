@@ -1,5 +1,5 @@
 # Poenews-Discordbot
-This is a simple bot written in rust that periodically fetches news from the [Path of Exile news rss-feed](https://www.pathofexile.com/news/rss), and post updates in relevant discord channels.  
+This is a simple bot written in rust that periodically fetches news from the [Path of Exile rss-feed](https://www.pathofexile.com/news/rss), and post updates in relevant discord channels.  
 
 It's intended to make it easier keeping up to date with news related to the game Path of Exile.
 
@@ -52,7 +52,11 @@ You should see the line: *rustbot is connected!* once the application is up and 
 To use the bot once it's up and running, any user can write any of the commands listed under [Features](## Features) in a discord server with the discord bot application.  
 Keep in mind that the discord bot application needs permission to use the text channel commands are posted in.
 
-When using a command it should look something like this:  
+When writing a command in discord, it should look something like this:  
 ![poenews start image](https://cdn.discordapp.com/attachments/1212370898062016543/1280513577148747859/image.png?ex=66d85ab3&is=66d70933&hm=14a0963d61a9ccacafa268c881aadf8e46700ff192f9c0a478b332bc85a536d6&)
 
-  
+And that's really it!  
+The bot is now going to send a message in the text channel(s) where ```!poenews start``` has been written, whenever a new news post is detected in the [Path of Exile rss-feed](https://www.pathofexile.com/news/rss).  
+Here's an example of what that looks like:  
+![news update example](https://cdn.discordapp.com/attachments/1212370898062016543/1280517600203505736/image.png?ex=66d85e72&is=66d70cf2&hm=cd1339bbc224990a88abac2179cd418b752dd7daa159fc383d3af18df68e8a24&)  
+
